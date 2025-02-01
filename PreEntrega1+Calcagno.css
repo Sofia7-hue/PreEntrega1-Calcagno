@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* Elimina box-sizing, para no usar Box Model */
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+main p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    /* Eliminamos el Flexbox aquí, sólo usamos display: block para el flujo normal de los elementos */
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    position: relative;
+    text-align: center; /* Centrado de contenido en el header */
+}
+
+.header-left {
+    display: inline-block; /* Usamos inline-block para que esté alineado horizontalmente */
+    vertical-align: middle; /* Asegura que esté alineado con el contenido */
+    margin-right: 20px;
+}
+
+.header-left img {
+    height: 120px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centramos los elementos del nav */
+}
+
+nav ul li {
+    display: inline-block; /* Para que los enlaces estén en una fila */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #007bff;
+    outline: none;
+    border-bottom: 2px solid #007bff;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3em;
+    line-height: 1.2;
+    height: calc(100vh - 100px); /* Sin Flexbox, se utiliza un alto fijo */
+    margin: 0;
+}
+
+section {
+    margin-bottom: 2px;
+}
+
+#Bienvenida {
+    margin-bottom: 2rem;
+}
+
+section p {
+    margin-bottom: 5px;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .header-left {
+        display: block; /* Cambiamos el layout para dispositivos móviles */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: block; /* Hacemos que los items de nav estén uno debajo de otro */
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block; /* Apilamos los elementos del menú */
+        margin-bottom: 10px;
+    }
+
+    .titulo {
+        font-size: 6vw; /* Ajustamos el tamaño de la fuente para pantallas pequeñas */
+    }
+
+    main p {
+        font-size: 1em;
+    }
+
+    #Bienvenida {
+        margin-bottom: 3rem;
+    }
+}
+
+h2 {
+    text-align: center;
+}
